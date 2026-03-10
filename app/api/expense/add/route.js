@@ -1,5 +1,5 @@
-import { connectDB } from "@/lib/mongodb";
-import Expense from "@/models/Expense";
+import { connectDB } from "../../../../lib/mongodb";
+import Expense from "../../../../models/Expense";
 
 export async function POST(req) {
   try {
