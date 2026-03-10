@@ -1,3 +1,4 @@
+import ExpenseList from "../../components/ExpenseList";
 import Link from "next/link";
 
 export default function Dashboard() {
@@ -25,28 +26,8 @@ export default function Dashboard() {
       </div>
 
       {/* Recent Transactions */}
-
-      <div className="bg-gray-900 p-6 rounded-xl">
-        <h2 className="text-xl font-semibold mb-4">Recent Transactions</h2>
-
-        <div className="space-y-3">
-          <div className="flex justify-between border-b border-gray-700 pb-2">
-            <span>Food</span>
-            <span className="text-red-400">₹500</span>
-          </div>
-
-          <div className="flex justify-between border-b border-gray-700 pb-2">
-            <span>Travel</span>
-            <span className="text-red-400">₹200</span>
-          </div>
-
-          <div className="flex justify-between">
-            <span>Shopping</span>
-            <span className="text-red-400">₹1200</span>
-          </div>
-        </div>
-      </div>
-
+      <div className="bg-gray-900 p-6 rounded-xl mb-6"></div>
+      <ExpenseList />
       {/* Add Expense Button */}
 
       <Link href="/add-expense">
