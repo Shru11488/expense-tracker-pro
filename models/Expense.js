@@ -1,0 +1,26 @@
+import mongoose from "mongoose";
+
+const ExpenseSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+  },
+  amount: {
+    type: Number,
+    required: true,
+  },
+  category: {
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now,
+  },
+});
+
+export default mongoose.models.Expense ||
+  mongoose.model("Expense", ExpenseSchema);
