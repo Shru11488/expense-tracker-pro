@@ -5,20 +5,25 @@ const ExpenseSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   amount: {
     type: Number,
     required: true,
   },
+
   category: {
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-  },
-  createdAt: {
+
+  date: {
     type: Date,
     default: Date.now,
+  },
+
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "User",
   },
 });
 
