@@ -1,5 +1,5 @@
-import ExpenseList from "../../components/ExpenseList";
 import Link from "next/link";
+import ExpenseList from "../../components/ExpenseList";
 
 export default function Dashboard() {
   return (
@@ -26,8 +26,10 @@ export default function Dashboard() {
       </div>
 
       {/* Recent Transactions */}
-      <div className="bg-gray-900 p-6 rounded-xl mb-6"></div>
-      <ExpenseList />
+      <div className="bg-gray-900 p-6 rounded-xl mb-6">
+        <h2 className="text-xl font-semibold mb-4">Recent Transactions</h2>
+        <ExpenseList />
+      </div>
       {/* Add Expense Button */}
 
       <Link href="/add-expense">

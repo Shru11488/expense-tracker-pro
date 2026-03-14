@@ -12,8 +12,8 @@ export default function ExpenseList() {
   const fetchExpenses = async () => {
     const res = await fetch("/api/expense/get");
     const data = await res.json();
-    console.log(data);
-    setExpenses(data.expenses);
+    console.log("API Response:", data);
+    setExpenses(Array.isArray(data.expenses) ? data.expenses : []);
   };
 
   const deleteExpense = async (id) => {
@@ -33,7 +33,7 @@ export default function ExpenseList() {
       <h2 className="text-xl mb-4">Recent Expenses</h2>
 
       <div className="space-y-3">
-        {expenses.map((expense) => (
+        {expenses?.map((expense) => (
           <div
             key={expense._id}
             className="p-4 border rounded flex justify-between items-center"
